@@ -45,17 +45,17 @@
 ### analysis
 * 구분별 청원횟수
     1. 데이터의 구분목록(보건의료,공공행정,교육,기타 등...)을 추출하여 각 값을 count 후 그래프 생성
-    2. ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/%EA%B5%AC%EB%B6%84%EB%B3%84%EC%B2%AD%EC%9B%90%ED%9A%9F%EC%88%98.png?raw=true)
+    2. ![이미지](src/img/구분별청원횟수.png)
     3. 확인결과 기타가 542로 가장 높으며, 다음으로 보건의료,공공행정,사회복지 등이 등장,가장 낮은 부분은 통일외교로 8건 밖에 해당하지 않음 
 
 
 * 진행상황별 목록
     1. 데이터의 진행상황(토론종료,토론중,숙성중,과제추친중,숙성종료)을 추출하여 각 값을 count 후 그래프 생성
-    2. ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/%EC%A7%84%ED%96%89%EC%83%81%ED%99%A9%EB%B3%84%EB%AA%A9%EB%A1%9D%ED%9A%9F%EC%88%98.png?raw=true)
+    2. ![이미지](src/img/진행상황별목록횟수.png)
 
 * 생성날짜별 청원횟수
     1. 데이터의 생성날짜를 추출하여 각 값을 count 후 그래프 생성
-    2. ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/%EC%83%9D%EC%84%B1%EB%82%A0%EC%A7%9C%EB%B3%84%EC%B2%AD%EC%9B%90%ED%9A%9F%EC%88%98.png?raw=true)
+    2. ![이미지](src/img/생성날짜별청원횟수.png)
     
     3. 청원횟수가 20회 이상인 날은 다음과 같다. 20회인 이상의경우 날짜별 word cloud 를 생성함. 
     4. 
@@ -77,7 +77,7 @@
 
  * 구분별 좋아요수
     1. 데이터의 구분별 좋아요수를 추출하여 각 값을 count 후 그래프 생성
-    2. ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/%EA%B5%AC%EB%B6%84%EB%B3%84%EC%A2%8B%EC%95%84%EC%9A%94%EC%88%98.png?raw=true)
+    2. ![이미지](src/img/구분별좋아요수.png)
     3. 각 구분별 좋아요수의 mean 과 max는 아래와 같다.
     4. 
         | 구분 | Mean | Max |
@@ -102,25 +102,25 @@
 
 ### word_cloud
 #### all_word_cloud 
-* ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/all_word_cloud.png?raw=true)
+* ![이미지](src/img/all_word_cloud.png)
 
 * all_word_cloud 에서 보이는 주요 단어는 어르신,부모님,제안,생각,운전,사회,음주,공무원,마음 등이 먼저 눈에 들어온다.
 
 ### date_word_cloud
-* ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/date_word_cloud/2018-10-30_word_cloud.png?raw=true)
+* ![이미지](src/img/date_word_cloud/2018-10-30_word_cloud.png)
 
 * 제안하는 사이트가 정부혁신1번가 -> 광화문1번가로 바뀌면서 이전에 기록된 데이터들이 모두 2018-10-30 으로 이동한것으로 보인다.
 * 주요 키워드는 : 이유,국민,시설,청년,정부,교육 등이 보인다.
 
 특히나 이후 청원횟수가 20회 이상인 날의 word_cloud 의 경우 다른특이점을 보이지 않으나 2020-03-31의 word_cloud에서부터 코로나,마스크가 등장하기 시작한다.
-* ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/date_word_cloud/2020-03-31_word_cloud.png?raw=true)
+* ![이미지](src/img/date_word_cloud/2020-03-31_word_cloud.png)
 
 2020-04-01 은 마스크,약국,취약,계층,구매,시간,배달 등의 단어로 미루어보아 코로나의 여파임 알수있다.
 
-* ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/date_word_cloud/2020-04-01_word_cloud.png?raw=true)
+* ![이미지](src/img/date_word_cloud/2020-04-01_word_cloud.png)
 
 ### division_word_cloud
-* ![이미지](https://github.com/kdj6394/Gwanghwamun_Suggestion/blob/master/src/img/division_word_cloud/%EA%B8%B0%ED%83%80_word_cloud.png?raw=true)
+* ![이미지](src/img/division_word_cloud/%EA%B8%B0%ED%83%80_word_cloud.png)
 
 * 가장 많은 구분항목인 __기타__ 에서 등장한 단어들은 위와 같다.
 * 눈에띄는 단어들은 국민,사회,이유,학생,미국,개선,정부,사람,주택 등 전반적인 사회정치 단어가 보인다.
@@ -128,11 +128,11 @@
 ### word2vec
 
 #### title
-* ![이미지](https://github.com/kdj6394/gwanghwamun_suggestion/blob/master/src/img/word2vec_title.png?raw=true)
+* ![이미지](src/img/word2vec_title.png)
 * window_int=3,min_cnt=19,num_cluster=5
 * 대체적으로 의미있는 단어끼리 군집화가 잘 이루어진것으로보인다.
 
 #### text
-* ![이미지](https://github.com/kdj6394/gwanghwamun_suggestion/blob/master/src/img/word2vec_text.png?raw=true)
+* ![이미지](src/img/word2vec_text.png)
 * window_int=5,min_cnt=230,num_cluster=6
 * 단어의 의미는 서로 군집화가 잘이루어졌으나, title 에 비해 많은양의 단어로 인해 만은차원의 생성, 그리고 차원축소의 과정에서 한눈에 알아보기 힘든 img 이다.
