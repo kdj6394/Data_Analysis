@@ -3,7 +3,7 @@ import tensorflow as tf
 from pandas import read_csv
 from keras.models import Sequential
 from keras.layers.core import Dense
-from keras.layers.recurrent import LSTM
+from keras.layers import LSTM
 import sys,os
 from os.path import join
 
@@ -36,7 +36,7 @@ if __name__ == '__main__':
             print(e)
 
     # root = sys.argv[1]
-    root = r'C:\Users\kdj63\OneDrive\문서\GitHub\Lotto\data'
+    root = r'/Users/dongjin/Documents/GitHub/Data_Analysis/Lotto/data'
     path = join(root,'lottery.csv')
     COLS = [0, 1, 2, 3, 4, 5, 6]
 
@@ -52,14 +52,15 @@ if __name__ == '__main__':
         model.compile(loss="mse", optimizer="adam")
 
         X_train, y_train, X_test, y_test = train_test_split(data)
-        e = index+1
-        model.fit(X_train, y_train, batch_size=100, epochs=e, validation_split=0.12)
+        epochs_size = index+5
+        model.fit(X_train, y_train, batch_size=50, epochs=epochs_size, validation_split=0.12)
 
         predicted = model.predict(X_test)
         rmse = np.sqrt(((predicted - y_test) ** 2).mean(axis=0))
 
         predeict_list.append(np.around(rmse))
         # print(f"\nPredicted numbers: {np.around(rmse)}")
+        print(index+1,'/',5,'/','-----------------------------------------------------------------------')
 
     for p in predeict_list:
         print(p)
