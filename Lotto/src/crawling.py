@@ -14,7 +14,8 @@ import time
 #     exec(code)
 
 if __name__ == "__main__":
-    save_root = sys.argv[1]
+    # save_root = sys.argv[1]
+    save_root = r'/Users/dongjin/Documents/GitHub/Data_Analysis/Lotto/data'
     result_df = {'회차': [], '번호1': [], '번호2': [], '번호3': [], '번호4': [], '번호5': [], '번호6': [], '번호7': []}
 
     try:
@@ -39,7 +40,7 @@ if __name__ == "__main__":
             for x in range(len(win_list)):
                 result_df['번호' + str(x + 1)].append(win_list[x])
 
-            time.sleep(0.3)
+            time.sleep(0.1)
     except Exception as e:
         print(e)
     finally:

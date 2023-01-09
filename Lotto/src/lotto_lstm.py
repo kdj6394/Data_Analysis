@@ -52,7 +52,7 @@ if __name__ == '__main__':
         model.compile(loss="mse", optimizer="adam")
 
         X_train, y_train, X_test, y_test = train_test_split(data)
-        epochs_size = index+5
+        epochs_size = (index+5)
         model.fit(X_train, y_train, batch_size=50, epochs=epochs_size, validation_split=0.12)
 
         predicted = model.predict(X_test)
@@ -60,7 +60,8 @@ if __name__ == '__main__':
 
         predeict_list.append(np.around(rmse))
         # print(f"\nPredicted numbers: {np.around(rmse)}")
-        print(index+1,'/',5,'/','-----------------------------------------------------------------------')
+        print('-------------------',index+1,'/',5,'-------------------\n')
 
+    print('\n=======================================Prediction Number=======================================\n')
     for p in predeict_list:
         print(p)
