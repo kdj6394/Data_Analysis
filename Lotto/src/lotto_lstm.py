@@ -36,7 +36,7 @@ if __name__ == '__main__':
             print(e)
 
     # root = sys.argv[1]
-    root = r'/Users/dongjin/Documents/GitHub/Data_Analysis/Lotto/data'
+    root = r'/Users/kdj/Documents/GitHub/Data_Analysis/Lotto/data'
     path = join(root,'lottery.csv')
     COLS = [0, 1, 2, 3, 4, 5, 6]
 

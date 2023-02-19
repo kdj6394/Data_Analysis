@@ -15,7 +15,7 @@ import time
 
 if __name__ == "__main__":
     # save_root = sys.argv[1]
-    save_root = r'/Users/dongjin/Documents/GitHub/Data_Analysis/Lotto/data'
+    save_root = r'/Users/kdj/Documents/GitHub/Data_Analysis/Lotto/data'
     result_df = {'회차': [], '번호1': [], '번호2': [], '번호3': [], '번호4': [], '번호5': [], '번호6': [], '번호7': []}
 
     try:
