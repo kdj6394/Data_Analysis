@@ -27,7 +27,7 @@ if __name__ == "__main__":
         total_no = int(driver.execute_script('return document.querySelector("select#dwrNoList option").innerText'))
         print(total_no)
 
-        for no in tqdm(range(total_no)):
+        for no in tqdm(range(total_no),ascii=True):
             driver.get(url + '&drwNo=' + str(no + 1))
 
             win_list = []
