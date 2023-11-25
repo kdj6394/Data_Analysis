@@ -6,6 +6,7 @@ from keras.layers.core import Dense
 from keras.layers import LSTM
 import sys,os
 from os.path import join
+import random
 
 def _load_data(df, n_prev=100):
     docX, docY = [], []
@@ -52,8 +53,8 @@ if __name__ == '__main__':
         model.compile(loss="mse", optimizer="adam")
 
         X_train, y_train, X_test, y_test = train_test_split(data)
-        epochs_size = (index+5)
-        model.fit(X_train, y_train, batch_size=50, epochs=epochs_size, validation_split=0.12)
+        epochs_size = (index+random.randrange(5))
+        model.fit(X_train, y_train, batch_size=50, epochs=epochs_size, validation_split=0.3)
 
         predicted = model.predict(X_test)
         rmse = np.sqrt(((predicted - y_test) ** 2).mean(axis=0))
@@ -63,5 +64,9 @@ if __name__ == '__main__':
         print('-------------------',index+1,'/',5,'-------------------\n')
 
     print('\n=======================================Prediction Number=======================================\n')
+    unique_list = list()
     for p in predeict_list:
         print(p)
+        for a in p:
+            unique_list.append(int(a))
+    

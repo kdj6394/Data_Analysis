@@ -18,16 +18,15 @@ if __name__ == "__main__":
     save_root = r'/Users/kdj/Documents/GitHub/Data_Analysis/Lotto/data'
     result_df = {'회차': [], '번호1': [], '번호2': [], '번호3': [], '번호4': [], '번호5': [], '번호6': [], '번호7': []}
 
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    # driver = chromedriver_settings(header=False, gpu=False, log=False, driver_root='bin/chromedriver.exe')
     try:
-        # driver = chromedriver_settings(header=False, gpu=False, log=False, driver_root='bin/chromedriver.exe')
-
-        driver = webdriver.Chrome(ChromeDriverManager().install())
         url = r'https://dhlottery.co.kr/gameResult.do?method=byWin'
         driver.get(url)
         total_no = int(driver.execute_script('return document.querySelector("select#dwrNoList option").innerText'))
-        print(total_no)
+        print('\n=========================== Number of All Runs : ',total_no,'===========================\n')
 
-        for no in tqdm(range(total_no),ascii=True):
+        for no in tqdm(range(total_no),desc='Crawling Lotto Number',leave=True,ascii=' @#$&*-+=X'):
             driver.get(url + '&drwNo=' + str(no + 1))
 
             win_list = []
